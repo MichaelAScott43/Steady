@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "STEADY",
+    "slug": "steady",
+    "scheme": "steady",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "plugins": ["expo-router"]
+  }
+}
