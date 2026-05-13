@@ -377,6 +377,11 @@
   transition: all 0.2s;
 }
 .mw-call-btn:hover { background: rgba(130,200,130,0.22); }
+.mw-call-btn.sms { background: rgba(100,160,220,0.12); border-color: rgba(100,160,220,0.3); color: #7ec8e3; }
+.mw-call-btn.sms:hover { background: rgba(100,160,220,0.22); }
+.mw-call-btn.web { background: rgba(180,130,200,0.12); border-color: rgba(180,130,200,0.3); color: #c49de6; }
+.mw-call-btn.web:hover { background: rgba(180,130,200,0.22); }
+.mw-resource-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
 .mw-empty-contacts { color: rgba(255,255,255,0.5); font-size: 14px; margin-top: 10px; }
 
 /* ── Crisis resources ────────────────────────────── */

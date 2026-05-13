@@ -90,6 +90,7 @@ const CRISIS_RESOURCES = [
     name: '988 Suicide & Crisis Lifeline',
     type: 'crisis',
     contact: '988',
+    dialable: '988',
     how: 'Call or text 988',
     available: '24/7',
     description: 'Free, confidential crisis counseling. No judgment. Real people.'
@@ -99,6 +100,8 @@ const CRISIS_RESOURCES = [
     name: 'Crisis Text Line',
     type: 'crisis',
     contact: 'Text HOME to 741741',
+    smsNumber: '741741',
+    smsPrefill: 'HOME',
     how: 'Text only — good if you can\'t talk',
     available: '24/7',
     description: 'Text with a trained crisis counselor from wherever you are.'
@@ -107,7 +110,9 @@ const CRISIS_RESOURCES = [
     id: 'veterans-crisis',
     name: 'Veterans Crisis Line',
     type: 'veteran',
-    contact: '988 then press 1',
+    contact: '988 (press 1)',
+    dialable: '988',
+    smsNumber: '838255',
     how: 'Call 988 and press 1, or text 838255',
     available: '24/7',
     description: 'Free, confidential support for veterans and their families.'
@@ -117,6 +122,7 @@ const CRISIS_RESOURCES = [
     name: 'NAMI Helpline',
     type: 'mental-health',
     contact: '1-800-950-6264',
+    dialable: '18009506264',
     how: 'Call or text NAMI to 741741',
     available: 'Mon–Fri 10am–10pm ET',
     description: 'Mental health information, referrals, and support.'
@@ -126,6 +132,7 @@ const CRISIS_RESOURCES = [
     name: 'SAMHSA National Helpline',
     type: 'substance',
     contact: '1-800-662-4357',
+    dialable: '18006624357',
     how: 'Call — free and confidential',
     available: '24/7',
     description: 'Treatment referrals for mental health and substance use.'
@@ -135,6 +142,7 @@ const CRISIS_RESOURCES = [
     name: 'Open Path Collective',
     type: 'therapy',
     contact: 'openpathcollective.org',
+    url: 'https://openpathcollective.org',
     how: 'Book online',
     available: 'Flexible scheduling',
     description: 'Affordable therapy for $30–$80 per session. Real therapists, real prices.'
@@ -144,6 +152,7 @@ const CRISIS_RESOURCES = [
     name: 'BetterHelp',
     type: 'therapy',
     contact: 'betterhelp.com',
+    url: 'https://www.betterhelp.com',
     how: 'Online — text, call, or video',
     available: 'Flexible scheduling',
     description: 'Online therapy you can access from your phone or computer.'

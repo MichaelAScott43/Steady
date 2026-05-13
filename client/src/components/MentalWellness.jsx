@@ -7,6 +7,29 @@ const API = '/api/life-support';
 const USER_ID = 'demo-user';
 const headers = { 'Content-Type': 'application/json', 'x-user-id': USER_ID };
 
+function ResourceActions({ r }) {
+  return (
+    <div className="mw-resource-actions">
+      {r.dialable && (
+        <a href={`tel:${r.dialable}`} className="mw-call-btn">📞 {r.contact}</a>
+      )}
+      {r.smsNumber && (
+        <a
+          href={`sms:${r.smsNumber}${r.smsPrefill ? `?body=${encodeURIComponent(r.smsPrefill)}` : ''}`}
+          className="mw-call-btn sms"
+        >
+          💬 Text {r.smsNumber}
+        </a>
+      )}
+      {r.url && (
+        <a href={r.url} target="_blank" rel="noopener noreferrer" className="mw-call-btn web">
+          🌐 Visit site
+        </a>
+      )}
+    </div>
+  );
+}
+
 const MOOD_OPTIONS = [
   { value: 1, emoji: '😔', label: 'Real rough' },
   { value: 2, emoji: '😟', label: 'Struggling' },
@@ -350,9 +373,7 @@ function HelpNow() {
                   </div>
                   <p className="mw-resource-desc">{r.description}</p>
                   <p className="mw-resource-how">{r.how}</p>
-                  {r.contact && (r.type === 'crisis' || r.type === 'veteran' || r.type === 'mental-health' || r.type === 'substance') && (
-                    <a href={`tel:${r.contact.replace(/\D/g, '').slice(0, 11)}`} className="mw-call-btn">{r.contact}</a>
-                  )}
+                  <ResourceActions r={r} />
                 </div>
               ))}
             </div>
@@ -492,6 +513,7 @@ function CrisisResourcesList() {
           <div className="mw-resource-header"><strong>{r.name}</strong><span className="mw-available">{r.available}</span></div>
           <p className="mw-resource-desc">{r.description}</p>
           <p className="mw-resource-how">{r.how}</p>
+          <ResourceActions r={r} />
         </div>
       ))}
     </div>
