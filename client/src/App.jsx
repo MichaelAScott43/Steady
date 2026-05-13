@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import MentalWellness from './components/MentalWellness';
 import {
   Brain,
   Briefcase,
@@ -78,6 +79,7 @@ export default function App() {
           <GlassCard title="Career + Resume" icon={Briefcase}><p>Resume optimization, job tracker, interview prep.</p></GlassCard>
           <GlassCard title="Funding Opportunities" icon={CircleDollarSign}><p>Relief grants, vouchers, and aid alerts personalized daily.</p></GlassCard>
           {active === 'AI Companion' && <GlassCard title="Conversation" icon={Brain}><div className="chat">{messages.map((m, i) => <p key={i}><b>{m.role}:</b> {m.text}</p>)}</div><form onSubmit={send}><input value={input} onChange={(e) => setInput(e.target.value)} placeholder="Tell TJ + Arlane what you need" /><button>Send</button></form></GlassCard>}
+          {active === 'Mental Wellness' && <motion.div {...cardAnim} transition={{ duration: 0.4 }} style={{ gridColumn: '1 / -1' }}><MentalWellness /></motion.div>}
         </motion.section>
       </AnimatePresence>
     </main>

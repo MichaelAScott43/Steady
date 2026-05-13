@@ -1,0 +1,438 @@
+/* Mental Wellness — TJ & Arlane Life Support Service */
+
+.mental-wellness {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 760px;
+  width: 100%;
+}
+
+/* ── Banner ─────────────────────────────────────── */
+.mw-banner {
+  background: linear-gradient(135deg, rgba(226,184,109,0.12), rgba(226,184,109,0.04));
+  border: 1px solid rgba(226,184,109,0.3);
+  border-radius: 12px;
+  padding: 16px 20px 12px;
+}
+
+.mw-banner-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.mw-banner-tabs button {
+  background: transparent;
+  border: 1px solid rgba(226,184,109,0.3);
+  border-radius: 20px;
+  color: rgba(226,184,109,0.6);
+  cursor: pointer;
+  font-size: 12px;
+  padding: 4px 12px;
+  transition: all 0.2s;
+}
+
+.mw-banner-tabs button.active,
+.mw-banner-tabs button:hover {
+  background: rgba(226,184,109,0.15);
+  border-color: rgba(226,184,109,0.6);
+  color: #e2b86d;
+}
+
+.mw-banner-quote {
+  color: #e2b86d;
+  font-size: 15px;
+  font-style: italic;
+  line-height: 1.5;
+  margin: 0 0 8px;
+}
+
+.mw-refresh {
+  background: none;
+  border: none;
+  color: rgba(226,184,109,0.5);
+  cursor: pointer;
+  font-size: 12px;
+  padding: 0;
+  transition: color 0.2s;
+}
+.mw-refresh:hover { color: #e2b86d; }
+
+/* ── Help Now trigger ────────────────────────────── */
+.mw-help-now-wrap {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mw-help-trigger {
+  align-items: center;
+  background: rgba(220,60,60,0.1);
+  border: 1px solid rgba(220,60,60,0.35);
+  border-radius: 8px;
+  color: #ff6b6b;
+  cursor: pointer;
+  display: flex;
+  font-size: 13px;
+  font-weight: 600;
+  gap: 6px;
+  padding: 8px 16px;
+  transition: all 0.2s;
+}
+.mw-help-trigger:hover {
+  background: rgba(220,60,60,0.2);
+  border-color: #ff6b6b;
+}
+
+/* ── Section ─────────────────────────────────────── */
+.mw-section {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.mw-section-header {
+  align-items: center;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-size: 14px;
+  font-weight: 600;
+  justify-content: space-between;
+  padding: 14px 18px;
+  width: 100%;
+  transition: background 0.15s;
+}
+.mw-section-header:hover { background: rgba(255,255,255,0.04); }
+
+.mw-section-title {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.mw-section-body {
+  border-top: 1px solid rgba(255,255,255,0.07);
+  overflow: hidden;
+  padding: 16px 18px;
+}
+
+/* ── Shared helpers ──────────────────────────────── */
+.mw-label {
+  color: rgba(255,255,255,0.5);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+
+.mw-voice {
+  border-radius: 8px;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 1.55;
+  margin: 0 0 10px;
+  padding: 10px 14px;
+}
+.mw-voice.tj {
+  background: rgba(226,184,109,0.08);
+  border-left: 3px solid #e2b86d;
+  color: #e2b86d;
+}
+.mw-voice.arlane {
+  background: rgba(180,130,200,0.08);
+  border-left: 3px solid #c49de6;
+  color: #c49de6;
+}
+
+.mw-textarea {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+  color: #fff;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  padding: 10px 14px;
+  resize: vertical;
+  width: 100%;
+}
+.mw-textarea::placeholder { color: rgba(255,255,255,0.3); }
+.mw-textarea:focus { border-color: rgba(226,184,109,0.4); outline: none; }
+
+.mw-btn-primary {
+  background: rgba(226,184,109,0.15);
+  border: 1px solid rgba(226,184,109,0.4);
+  border-radius: 8px;
+  color: #e2b86d;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 20px;
+  transition: all 0.2s;
+}
+.mw-btn-primary:hover:not(:disabled) { background: rgba(226,184,109,0.25); }
+.mw-btn-primary:disabled { cursor: not-allowed; opacity: 0.4; }
+
+.mw-btn-ghost {
+  background: none;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  color: rgba(255,255,255,0.6);
+  cursor: pointer;
+  font-size: 14px;
+  padding: 8px 16px;
+  transition: all 0.2s;
+}
+.mw-btn-ghost:hover { border-color: rgba(255,255,255,0.4); color: #fff; }
+.mw-btn-ghost.small { font-size: 12px; padding: 5px 10px; }
+
+.mw-back {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.5);
+  cursor: pointer;
+  font-size: 13px;
+  margin-bottom: 12px;
+  padding: 0;
+  transition: color 0.2s;
+}
+.mw-back:hover { color: #fff; }
+
+.mw-response {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* ── Mood check-in ───────────────────────────────── */
+.mw-mood-row {
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+
+.mw-mood-btn {
+  align-items: center;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 4px;
+  padding: 10px 4px;
+  transition: all 0.2s;
+}
+.mw-mood-btn:hover { border-color: rgba(226,184,109,0.3); }
+.mw-mood-btn.selected {
+  background: rgba(226,184,109,0.12);
+  border-color: rgba(226,184,109,0.6);
+}
+
+.mw-emoji { font-size: 22px; }
+.mw-mood-label { color: rgba(255,255,255,0.55); font-size: 11px; text-align: center; }
+.mw-mood-btn.selected .mw-mood-label { color: #e2b86d; }
+
+/* Mood history dots */
+.mw-history { margin-top: 16px; }
+.mw-mood-dots {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+.mw-dot {
+  border-radius: 50%;
+  display: block;
+  height: 12px;
+  width: 12px;
+  background: oklch(from hsl(calc(var(--mood) * 20), 70%, 50%) l c h);
+  /* fallback for older browsers */
+  background-color: hsl(calc(var(--mood, 3) * 25deg), 60%, 45%);
+}
+.mw-pattern-comment {
+  color: #e2b86d;
+  font-size: 13px;
+  font-style: italic;
+}
+
+/* ── Journal ─────────────────────────────────────── */
+.mw-voice-toggle {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.mw-voice-toggle button {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 20px;
+  color: rgba(255,255,255,0.5);
+  cursor: pointer;
+  font-size: 12px;
+  padding: 4px 12px;
+  transition: all 0.2s;
+}
+.mw-voice-toggle button.active { border-color: rgba(226,184,109,0.5); color: #e2b86d; }
+
+.mw-prompt {
+  border-radius: 8px;
+  font-size: 15px;
+  line-height: 1.55;
+  margin-bottom: 8px;
+  padding: 12px 14px;
+}
+.mw-prompt-tj { background: rgba(226,184,109,0.08); border-left: 3px solid #e2b86d; }
+.mw-prompt-arlane { background: rgba(180,130,200,0.08); border-left: 3px solid #c49de6; }
+
+.mw-prompt-voice { font-weight: 700; margin-right: 6px; }
+.mw-prompt-tj .mw-prompt-voice { color: #e2b86d; }
+.mw-prompt-arlane .mw-prompt-voice { color: #c49de6; }
+
+.mw-past-entries { margin-top: 16px; }
+.mw-entry-preview {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  margin-bottom: 8px;
+  padding: 10px 14px;
+}
+.mw-entry-date { color: rgba(255,255,255,0.35); display: block; font-size: 11px; margin-bottom: 4px; }
+.mw-entry-preview p { color: rgba(255,255,255,0.65); font-size: 13px; margin: 0; }
+
+/* ── Help Now ────────────────────────────────────── */
+.mw-help-intro {
+  color: #e2b86d;
+  font-size: 13px;
+  font-style: italic;
+  margin-bottom: 14px;
+}
+
+.mw-help-options { display: flex; flex-direction: column; gap: 10px; }
+
+.mw-help-btn {
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  font-weight: 600;
+  gap: 4px;
+  padding: 16px;
+  text-align: center;
+  transition: all 0.2s;
+}
+.mw-help-btn span:first-child { font-size: 24px; }
+.mw-help-btn small { color: rgba(255,255,255,0.5); font-size: 12px; font-weight: 400; }
+
+.mw-help-btn.calm { background: rgba(100,160,220,0.1); border: 1px solid rgba(100,160,220,0.3); color: #7ec8e3; }
+.mw-help-btn.calm:hover { background: rgba(100,160,220,0.2); }
+.mw-help-btn.contact { background: rgba(130,200,130,0.1); border: 1px solid rgba(130,200,130,0.3); color: #7ed9a0; }
+.mw-help-btn.contact:hover { background: rgba(130,200,130,0.2); }
+.mw-help-btn.crisis { background: rgba(220,60,60,0.1); border: 1px solid rgba(220,60,60,0.3); color: #ff8080; }
+.mw-help-btn.crisis:hover { background: rgba(220,60,60,0.2); }
+
+/* ── Grounding ───────────────────────────────────── */
+.mw-grounding { display: flex; flex-direction: column; gap: 12px; }
+.mw-grounding-title { font-size: 16px; font-weight: 700; margin: 0; }
+.mw-grounding-title.tj { color: #e2b86d; }
+.mw-grounding-title.arlane { color: #c49de6; }
+.mw-duration { color: rgba(255,255,255,0.4); font-size: 12px; margin: 0; }
+.mw-steps { color: rgba(255,255,255,0.85); font-size: 14px; line-height: 1.7; margin: 0; padding-left: 20px; }
+.mw-steps li { margin-bottom: 6px; }
+.mw-grounding-quote { border-radius: 8px; color: #e2b86d; font-style: italic; font-size: 14px; margin: 4px 0 0; }
+.mw-grounding-nav { align-items: center; display: flex; gap: 12px; justify-content: center; }
+
+/* ── Contacts ────────────────────────────────────── */
+.mw-contact-list { display: flex; flex-direction: column; gap: 10px; margin-top: 12px; }
+.mw-contact-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 14px;
+}
+.mw-contact-card strong { color: #fff; font-size: 15px; }
+.mw-contact-rel { color: rgba(255,255,255,0.4); font-size: 12px; }
+.mw-call-btn {
+  align-self: flex-start;
+  background: rgba(130,200,130,0.12);
+  border: 1px solid rgba(130,200,130,0.3);
+  border-radius: 6px;
+  color: #7ed9a0;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 4px;
+  padding: 5px 12px;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.mw-call-btn:hover { background: rgba(130,200,130,0.22); }
+.mw-empty-contacts { color: rgba(255,255,255,0.5); font-size: 14px; margin-top: 10px; }
+
+/* ── Crisis resources ────────────────────────────── */
+.mw-resource-list { display: flex; flex-direction: column; gap: 10px; }
+.mw-resource-list.standalone { margin-top: 4px; }
+
+.mw-resource {
+  border-radius: 10px;
+  border-left: 3px solid;
+  padding: 12px 14px;
+}
+.mw-resource-crisis { background: rgba(220,60,60,0.08); border-color: #ff6b6b; }
+.mw-resource-veteran { background: rgba(60,120,220,0.08); border-color: #7ec8e3; }
+.mw-resource-mental-health { background: rgba(180,130,200,0.08); border-color: #c49de6; }
+.mw-resource-substance { background: rgba(220,180,60,0.08); border-color: #e2c96d; }
+.mw-resource-therapy { background: rgba(130,200,130,0.08); border-color: #7ed9a0; }
+
+.mw-resource-header { align-items: center; display: flex; justify-content: space-between; margin-bottom: 4px; }
+.mw-resource-header strong { color: #fff; font-size: 14px; }
+.mw-available { color: rgba(255,255,255,0.4); font-size: 11px; }
+.mw-resource-desc { color: rgba(255,255,255,0.7); font-size: 13px; margin: 0 0 4px; }
+.mw-resource-how { color: rgba(255,255,255,0.45); font-size: 12px; font-style: italic; margin: 0 0 8px; }
+
+/* ── Safety Plan ─────────────────────────────────── */
+.mw-sp-section { margin-bottom: 18px; }
+.mw-contact-inputs {
+  align-items: center;
+  display: flex;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+.mw-contact-inputs input,
+.mw-sp-row input {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 6px;
+  color: #fff;
+  flex: 1;
+  font-family: inherit;
+  font-size: 13px;
+  padding: 7px 10px;
+}
+.mw-contact-inputs input:focus,
+.mw-sp-row input:focus { border-color: rgba(226,184,109,0.4); outline: none; }
+
+.mw-sp-row { align-items: center; display: flex; gap: 6px; margin-bottom: 6px; }
+
+.mw-remove {
+  background: none;
+  border: none;
+  color: rgba(255,80,80,0.6);
+  cursor: pointer;
+  font-size: 14px;
+  padding: 4px 6px;
+  transition: color 0.2s;
+}
+.mw-remove:hover { color: #ff6b6b; }
+
+.mw-crisis-top { margin-bottom: 12px; }

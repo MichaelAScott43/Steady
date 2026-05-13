@@ -3,6 +3,7 @@ const path = require('path');
 const tjRoutes = require('./routes/tjRoutes');
 const reminderRoutes = require('./routes/reminderRoutes');
 const conversationRoutes = require('./routes/conversationRoutes');
+const lifeSupportRoutes = require('./routes/lifeSupportRoutes');
 
 const app = express();
 
@@ -23,6 +24,7 @@ app.get('/api/health', (_req, res) => {
 app.use('/api/tj', tjRoutes);
 app.use('/api/reminders', reminderRoutes);
 app.use('/api/conversations', conversationRoutes);
+app.use('/api/life-support', lifeSupportRoutes);
 app.post('/api/chat', (req, res) => {
   const { message, personality } = req.body || {};
 
